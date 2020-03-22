@@ -49,7 +49,6 @@ def run(songs)
       play(songs)
       puts prompt
     when "help"
-      help_prompt
       puts prompt
     when "exit"
       exit_jukebox
