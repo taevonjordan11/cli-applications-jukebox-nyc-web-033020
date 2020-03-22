@@ -38,22 +38,22 @@ def exit_jukebox
 end
 
 def run(songs)
-  prompt = "Please enter a command:"
-  puts prompt
-    while command = gets.chomp
-    case command 
-    when "list"
-      list(songs)
-      puts prompt
-    when "play"
-      play(songs)
-      puts prompt
-    when "help"
-      help_prompt
-      puts prompt
-    when "exit"
-      exit_jukebox
-      break
-    end
-  end
+	help
+	input = nil
+	while input != "exit"
+		puts "Please enter a command:"
+		input = gets.chomp
+		case
+		when input == "help"
+			help
+		when input == "list"
+			list(songs)
+		when input == "play"
+			play(songs)
+		else
+			puts "Invalid input, please try again"
+		end
+	end
+	exit_jukebox
+end
 end
