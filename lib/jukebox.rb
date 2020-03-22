@@ -37,7 +37,7 @@ def exit_jukebox
   puts "Goodbye"
 end
 
-def run(songs)
+def run
   help
   puts "Please enter a command:"
   user_response = gets.chomp
@@ -48,11 +48,11 @@ def run(songs)
         puts "Please enter a command:"
         user_response = gets.chomp
       when "list"
-        list(songs)
+        list
         puts "Please enter a command:"
         user_response = gets.chomp
       when "play"
-        play(songs)
+        play
         puts "Please enter a command:"
         user_response = gets.chomp
       else
